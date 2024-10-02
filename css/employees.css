@@ -1,0 +1,295 @@
+/* Salary Slips-specific styles */
+.container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Create Button */
+.create-btn {
+    background-color: teal;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 128, 128, 0.5);
+    transition: all 0.3s ease;
+}
+
+.create-btn:hover {
+    background-color: #00ffff; /* Neon effect */
+    box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.6);
+    transform: translateY(-3px); /* Lifting effect */
+}
+
+/* Search Input */
+.search-input {
+    margin: 20px 0;
+    padding: 10px;
+    width: 20%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Searchable Dropdown */
+.searchable-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #333;
+}
+
+.searchable-dropdown:focus {
+    outline: none;
+    border-color: teal;
+    box-shadow: 0px 0px 8px rgba(0, 128, 128, 0.5); /* Highlight when focused */
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left; /* Left-aligned for all cells */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+thead {
+    background: linear-gradient(90deg, rgb(1, 117, 126), rgb(10, 161, 149)); /* Dark blue gradient */
+    color: white;
+}
+
+thead th {
+    padding: 10px; /* Reduced padding for thinner rows */
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase; /* Makes the header text uppercase */
+    font-size: 14px; /* Slightly smaller for a clean, modern look */
+    letter-spacing: 1px; /* Adds spacing between letters for a more modern feel */
+}
+
+/* Thinner table rows */
+tbody tr {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    height: 30px; /* Set row height for thinner appearance */
+}
+
+tbody td {
+    padding: 8px; /* Reduced padding for thinner rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+/* Table link styles */
+td a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: teal; /* Updated to a subtle teal to match the theme */
+    text-decoration: none;
+}
+
+td a.edit-btn:hover {
+    color: #4caf50; /* Green for Edit */
+}
+
+td a.delete-btn:hover {
+    color: #f44336; /* Red for Delete */
+}
+
+/* Popup Form */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* Increased width for form */
+    max-height: 80vh; /* Limit height to viewport and allow scrolling */
+    overflow-y: auto; /* Add a scroll bar when content exceeds height */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.popup-form.active {
+    display: block;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input,
+.form-container select { /* Updated for input and select elements */
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container #submit-btn {
+    background-color: teal;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 128, 128, 0.5);
+}
+
+.form-container #cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.modal-content .confirm-btn, .modal-content .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.modal-content .confirm-btn {
+    background-color: teal;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 128, 128, 0.5);
+    transition: all 0.3s ease;
+}
+
+.modal-content .confirm-btn:hover {
+    background-color: #00ffff; /* Neon effect */
+    box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.6);
+}
+
+.modal-content .cancel-btn {
+    background-color: #f44336;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(244, 67, 54, 0.5);
+    transition: all 0.3s ease;
+}
+
+.modal-content .cancel-btn:hover {
+    background-color: #ff6666;
+}
+
+/* Toast Notification */
+.toast {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toast.show {
+    visibility: visible; /* Show the toast */
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}

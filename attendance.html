@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - Employee Management</title>
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/attendance.css">
+    
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Universal NavBar -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Attendance Management</h1>
+
+        <!-- Employee Dropdown -->
+        <label for="employee-select">Select Employee:</label>
+        <select id="employee-select">
+            <option value="">Loading employees...</option>
+        </select>
+
+        <!-- Month Dropdown -->
+        <label for="month-select">Select Month:</label>
+        <select id="month-select">
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+
+        <!-- Calendar Container -->
+        <div id="calendar-container" class="calendar-container">
+            <h2 id="month-title"></h2>
+            <div class="days">
+                <!-- Days of the week -->
+                <div class="day">Sun</div>
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>
+            </div>
+            <div id="days-grid" class="days-grid">
+                <!-- Days will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase JS SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Your custom Firebase configuration -->
+    <script src="js/firebase-config.js"></script>
+    
+    <!-- Your custom scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/attendance.js"></script>
+</body>
+</html>

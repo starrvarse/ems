@@ -1,0 +1,179 @@
+/* Loan Balances-specific styles */
+.container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Search Input and Print Button */
+.search-input {
+    margin: 20px 0;
+    padding: 10px;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.print-btn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #006c7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.print-btn:hover {
+    background-color: #18bebe;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+thead {
+    background: linear-gradient(90deg, rgb(1, 117, 126), rgb(10, 161, 149)); /* Dark blue gradient */
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+tbody tr {
+    background-color: white;
+    color: black;
+}
+
+tbody td {
+    padding: 12px;
+    word-wrap: break-word; /* Ensure the content wraps */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Toast Notification */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+/* Print styles */
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Container */
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Hide elements not needed for printing */
+    #navbar-container, .search-input, #print-btn {
+        display: none;
+    }
+
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    td {
+        background-color: #f9f9f9;
+    }
+
+    /* Company Info Section */
+    .company-info {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .company-info h2 {
+        margin-bottom: 5px;
+    }
+
+    /* Ensure table fits page */
+    .container {
+        width: 100%;
+        page-break-inside: avoid;
+    }
+}

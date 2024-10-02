@@ -1,0 +1,138 @@
+/* NavBar Styling */
+.navbar {
+    background: linear-gradient(45deg, #04b8be, #00b9b0); /* Vibrant gradient */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+    border-radius: 8px;
+}
+
+/* Align tabs from left to right */
+.navbar .nav-left {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-left li {
+    margin-right: 25px;
+    position: relative; /* Important for dropdown positioning */
+}
+
+.navbar .nav-left li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* 3D effect for individual tabs */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+}
+
+.navbar .nav-left li a i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.navbar .nav-left li a:hover {
+    color: #004149; /* Hover effect with vibrant color */
+    background-color: rgb(8, 181, 194);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced 3D effect on hover */
+    transform: translateY(-3px); /* Slight lift for 3D feel */
+}
+
+/* Dropdown Menu Styles */
+.navbar .nav-left li .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Align below the parent li */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.navbar .nav-left li .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.navbar .nav-left li .dropdown-content a:hover {
+    background-color: #10e2f1;
+    color: white;
+}
+
+/* Show the dropdown on hover */
+.navbar .nav-left li:hover .dropdown-content {
+    display: block;
+}
+
+/* Align logout icon to the right */
+.navbar .nav-right {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-right li {
+    margin-left: 20px;
+}
+
+.navbar .nav-right li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* 3D effect for logout */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+}
+
+.navbar .nav-right li a i {
+    margin-right: 8px;
+}
+
+.navbar .nav-right li a:hover {
+    color: #f12711;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced 3D effect on hover */
+    transform: translateY(-3px); /* Slight lift for 3D feel */
+}
+
+/* Responsive Navbar (Mobile View) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar .nav-left {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .nav-left li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav-right {
+        margin-top: 20px;
+    }
+}

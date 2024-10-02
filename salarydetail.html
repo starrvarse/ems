@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Detail</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/salarydetail.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Salary Detail</h1>
+
+        <!-- Salary Detail Table -->
+        <table class="salary-table">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Employee Code</th>
+                    <th>Salary</th>
+                    <th>Attendance</th>
+                    <th>Payable Salary</th>
+                </tr>
+            </thead>
+            <tbody id="salary-table-body">
+                <!-- Rows will be populated dynamically with JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/navbar.js"></script> <!-- Navbar script -->
+    <script src="js/salarydetail.js"></script> <!-- Salary Detail Script -->
+</body>
+</html>

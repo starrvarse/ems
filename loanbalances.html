@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Balances - Employee Management</title>
+
+    <!-- Navbar and Loan Balances Specific CSS -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/loanbalances.css">
+
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Universal NavBar -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Loan Balances</h1>
+
+        <!-- Searchable Filter and Print Button -->
+        <div class="filter-print-container">
+            <input type="text" id="search-input" placeholder="Search loan balances..." class="search-input">
+            <button id="print-btn" class="print-btn"><i class="fas fa-print"></i> Print</button> <!-- Print Button -->
+        </div>
+
+        <!-- Table -->
+        <table id="loan-balance-table">
+            <thead>
+                <tr>
+                    <th>Loan Employee Name</th>
+                    <th>Loan ID (Document Number)</th>
+                    <th>Tenure (Months)</th>
+                    <th>Passed EMI</th>
+                    <th>EMI</th>
+                    <th>Total EMI Paid</th>
+                    <th>Loan Amount</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody id="loan-balance-table-body">
+                <!-- Dynamic content goes here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/loanbalances.js"></script>
+</body>
+</html>

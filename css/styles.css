@@ -1,0 +1,143 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a; /* Dark background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 450px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05); /* Transparent background */
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3); /* Reduced neon glow */
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(10px); /* Added for Safari support */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border for glass effect */
+}
+
+/* Neon text styles for headers */
+h1, h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; /* Reduced glow */
+}
+
+/* Neon text for login/signup links and small messages */
+a, p {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; /* Subtle neon effect */
+    transition: text-shadow 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #ffffff, 0 0 15px #00ffff; /* Slightly stronger on hover */
+}
+
+/* Inputs with reduced 3D glow effect */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Light border */
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; /* Reduced glow */
+    outline: none;
+}
+
+/* Buttons with reduced neon and 3D effect */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(0, 255, 255, 0.2); /* Transparent neon background */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2), 0 0 10px #00ffff; /* Reduced neon glow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 255, 255, 0.4); /* Slightly intensified neon on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.3), 0 0 20px #00ffff; /* Slightly stronger glow on hover */
+    transform: translateY(-2px); /* Gentle lifting effect */
+}
+
+/* Form container (for login/signup forms) */
+.form-container {
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#login-form.active, #signup-form.active {
+    display: block;
+}
+
+/* Hidden Sign Up */
+.hidden {
+    display: none;
+}
+
+/* Toast Notification */
+.toast {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgba(0, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3); /* Reduced glow for toast */
+    transition: visibility 0.3s ease, opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeout 0.5s 3s forwards;
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; transform: translateY(20px); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

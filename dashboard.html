@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+
+    <!-- Dashboard Specific CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Chart.js Library for Graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Universal Navbar (loaded dynamically) -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <div class="dashboard-container">
+        <h1>Dashboard</h1>
+
+        <!-- Cards Section -->
+        <div class="cards-container">
+            <!-- Number of Employees Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="card-info">
+                    <h3 id="employee-count">0</h3>
+                    <p>Total Employees</p>
+                </div>
+            </div>
+
+            <!-- Salary Slips for Current Month Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <div class="card-info">
+                    <h3 id="salary-slip-count">0</h3>
+                    <p>Salary Slips This Month</p>
+                </div>
+            </div>
+
+            <!-- Total Salary Paid Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="card-info">
+                    <h3 id="total-salary">0</h3>
+                    <p>Total Salary Paid</p>
+                </div>
+            </div>
+
+            <!-- Number of Loans Given Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="card-info">
+                    <h3 id="loans-given-count">0</h3>
+                    <p>Loans Given</p>
+                </div>
+            </div>
+
+            <!-- Total Loan Amount Given Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-money-check-alt"></i>
+                </div>
+                <div class="card-info">
+                    <h3 id="total-loan-amount">0</h3>
+                    <p>Total Loan Amount</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="chart-container">
+            <canvas id="salary-chart"></canvas>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/dashboard.js"></script>
+
+    <!-- Script to dynamically load the navbar -->
+    <script>
+        // Load the navbar dynamically
+        document.getElementById('navbar-container').innerHTML = fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+</body>
+</html>

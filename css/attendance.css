@@ -1,0 +1,87 @@
+/* Attendance-specific styles */
+.container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar */
+.calendar-container {
+    margin-top: 20px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for the 7 days of the week */
+    margin-bottom: 10px;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for the 7 days of the week */
+    grid-gap: 10px;
+}
+
+.day {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Makes the day cells clickable */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover and selection */
+}
+
+.day:hover {
+    background-color: #e0e0e0; /* Hover effect for better UX */
+}
+
+/* Style for weekends */
+.day.weekend {
+    background-color: #f9d7da;
+}
+
+/* Highlight today */
+.day.today {
+    background-color: #d1e7dd;
+    font-weight: bold;
+}
+
+/* Highlight selected dates */
+.day.selected {
+    background-color: #4caf50; /* Green background for selected dates */
+    color: white; /* White text for selected dates */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .month {
+        width: 100%;
+    }
+}

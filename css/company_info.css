@@ -1,0 +1,72 @@
+/* General container styling */
+.container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#edit-btn {
+    background-color: teal;
+    color: white;
+}
+
+#save-btn {
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+}
+
+#save-btn.enabled {
+    background-color: green;
+    cursor: pointer;
+}
